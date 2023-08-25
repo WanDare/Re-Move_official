@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+:root {
+    --bg-color: #ededed;
+    --text-color: black;
+    --main-color: black;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .2);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Header navigator bar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    background-image: url("https://wallpaperaccess.com/full/1159285.jpg");
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar-links ul {
+    font-weight: 500;
+    transition: .5s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links ul a {
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem;
+}
+.navbar-links a:hover,
+.navbar-links a.active {
+    color: blue;
+    transition: .5s;
+    font-size: 1.2em;
+}
+
+.navbar-links2 ul {
+    font-weight: 500;
+    transition: .5s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links2 li {
+    list-style: none;
+}
+.navbar-links2 .login{
+    margin-top: 5px;
+}
+.navbar-links2 ul a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+.navbar-links2 :hover {
+    color: blue;
+}
+.btnSign_up-popup {
+    width: 100px;
+    height: 40px;
+    color: #3164F4;
+    background: whitesmoke;
+    border: 1px solid #3164F4;
+    outline: #3164F4;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: .5s;
+}
+.btnSign_up-popup:hover {
+    background: #3164F4;
+    color: white;
+    transform: scale(1);
+}
+/* Drop down menu bar */
+.dropdown_menu li a {
+    text-decoration: none;
+    color: black;
+}
+.dropdown_menu li a:hover{
+    color: black;
+    width: 100%;
+    transition: .1s;
+    border-radius: 10px;
+    outline: 1px solid black;
+}
+.dropdown_menu .btnSign_up-popup {
+    background-color: transparent;
+}
+.dropdown_menu .btnSign_up-popup:hover {
+    background-color: blue;
+}
+.dropdown_menu {
+    text-align: center;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+    height: 250px;
+}
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .toggle_btn {
+    color: grey;
+    padding-right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .navbar-links2 ul,
+    .navbar-links ul{
+        display: none; 
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+} 
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        right: 1rem;
+        left: 1rem;
+        width: unset;
+    }
+} 
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.Service-main {
+    align-items: center;
+}
+.Service-main .Service-heading {
+    background-image: url('../images/service_bg.jpg');
+    background-size: cover;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.Service-main .Service-title h2 {
+    font-size: 3rem;
+}
+.Service-main .Service-container {
+    padding: 15px 9%;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 4fr));
+    gap: 50px;
+    border-radius: 7px;
+}
+.Service-container img {
+    width: 100%;
+    height: auto;
+}
+.Service-container .service-box1 {
+    padding: 20px 0 20px 0;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, .1);
+    border-radius: 20px;
+}
+.service-box1 h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.service-box2 .most p {
+    font-size: .8rem;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 320px;
+    margin-right: 5px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+}
+.Service-container .service-box2 {
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, .1);
+    border-radius: 20px;
+}
+.service-box2 h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+.Service-container .service-box3 {
+    padding: 20px 0 20px 0;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, .1);
+    border-radius: 20px;
+}
+.service-box3 h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.service-box3 img{
+    width: 70%;
+    height: auto;
+}
+.addservice .btnadd_to_service-popup{
+    bottom: -25px;
+    width: 140px;
+    padding: 10px;
+    color: white;
+    background: blue;
+    border:  1px solid blue;
+    outline: blue;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.em;
+    transition: .5s;
+    background-size: cover;
+    background-position: center;
+}
+.addservice .btnadd_to_service-popup:hover {
+    background: transparent;
+    color: blue;
+}
+
+.service-question {
+    padding: 15px 9%;
+    text-align: center;
+    background-image: url('../images/service_bg_flip.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.question-head img {
+    padding-top: 100px;
+    width: 30%;
+    height: auto;
+}
+.question-title h2 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+.question-head .question-bar {
+    padding: 15px 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: 2fr;
+}
+
+/* question and anwser bar */
+.collapsible {
+    font-size: 1.5rem;
+    overflow: hidden;
+    font-weight: 500;
+}
+.collapsible input {
+    display: none;
+}
+.collapsible label {
+    position: relative;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: #1c1c6b;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 4px;
+    z-index: 1;
+}
+.collapsible label:after {
+    content: "";
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    background: url(arrow-down-3101.svg) no-repeat 0 0;
+    transition: all 0.3s ease;
+}
+.collapsible input:checked + label:after {
+    transform: rotate(90deg);
+}
+.collapsible-text {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.collapsible input:checked ~
+ .collapsible-text {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    opacity: 1;
+    top: 0;
+}
+
+/* question and anwser bar */
+.collapsible2 {
+    font-size: 1.5rem;
+    overflow: hidden;
+    font-weight: 500;
+}
+.collapsible2 input {
+    display: none;
+}
+.collapsible2 label {
+    position: relative;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: #1c1c6b;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 4px;
+    z-index: 1;
+}
+.collapsible2 label:after {
+    content: "";
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    background: url(arrow-down-3101.svg) no-repeat 0 0;
+    transition: all 0.3s ease;
+}
+.collapsible2 input:checked + label:after {
+    transform: rotate(90deg);
+}
+.collapsible-text2 {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.collapsible2 input:checked ~
+ .collapsible-text2 {
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    opacity: 1;
+    top: 0;
+}
+
+/* question and anwser bar */
+.collapsible3 {
+    font-size: 1.5rem;
+    overflow: hidden;
+    font-weight: 500;
+}
+.collapsible3 input {
+    display: none;
+}
+.collapsible3 label {
+    position: relative;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: #1c1c6b;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 4px;
+    z-index: 1;
+}
+.collapsible3 label:after {
+    content: "";
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    background: url(arrow-down-3101.svg) no-repeat 0 0;
+    transition: all 0.3s ease;
+}
+.collapsible3 input:checked + label:after {
+    transform: rotate(90deg);
+}
+.collapsible-text3 {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.collapsible3 input:checked ~
+ .collapsible-text3 {
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    opacity: 1;
+    top: 0;
+}
+
+/* question and anwser bar */
+.collapsible4 {
+    font-size: 1.5rem;
+    overflow: hidden;
+    font-weight: 500;
+}
+.collapsible4 input {
+    display: none;
+}
+.collapsible4 label {
+    position: relative;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: #1c1c6b;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 4px;
+    z-index: 1;
+}
+.collapsible4 label:after {
+    content: "";
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    background: url(arrow-down-3101.svg) no-repeat 0 0;
+    transition: all 0.3s ease;
+}
+.collapsible4 input:checked + label:after {
+    transform: rotate(90deg);
+}
+.collapsible-text4 {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.collapsible4 input:checked ~
+ .collapsible-text4 {
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    opacity: 1;
+    top: 0;
+}
+
+/* question and anwser bar */
+.collapsible5 {
+    font-size: 1.5rem;
+    overflow: hidden;
+    font-weight: 500;
+}
+.collapsible5 input {
+    display: none;
+}
+.collapsible5 label {
+    position: relative;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: #1c1c6b;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 4px;
+    z-index: 1;
+}
+.collapsible5 label:after {
+    content: "";
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    background: url(arrow-down-3101.svg) no-repeat 0 0;
+    transition: all 0.3s ease;
+}
+.collapsible5 input:checked + label:after {
+    transform: rotate(90deg);
+}
+.collapsible-text5 {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.collapsible5 input:checked ~
+ .collapsible-text5 {
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    opacity: 1;
+    top: 0;
+}
+
+/* question and anwser bar */
+.collapsible6 {
+    font-size: 1.5rem;
+    overflow: hidden;
+    font-weight: 500;
+}
+.collapsible6 input {
+    display: none;
+}
+.collapsible6 label {
+    position: relative;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: #1c1c6b;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 4px;
+    z-index: 1;
+}
+.collapsible6 label:after {
+    content: "";
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    background: url(arrow-down-3101.svg) no-repeat 0 0;
+    transition: all 0.3s ease;
+}
+.collapsible6 input:checked + label:after {
+    transform: rotate(90deg);
+}
+.collapsible-text6 {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.collapsible6 input:checked ~
+ .collapsible-text6 {
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    opacity: 1;
+    top: 0;
+}
+@media (max-width: 1200px) {
+    .question-head img {
+        width: 70%;
+    }
+    .question-head .question-bar {
+        padding: 15px 20%;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+    .question-title h2 {
+        font-size: 2.5rem;
+    }
+    .collapsible,
+    .collapsible1,
+    .collapsible2,
+    .collapsible3,
+    .collapsible4,
+    .collapsible5,
+    .collapsible6 {
+        font-size: .9rem;
+        width: 100%;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Footer-link */
+.Footer {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    padding-right: 25%;
+    gap: 15px;
+    background-image: url("https://wallpaperaccess.com/full/1159285.jpg");
+    background-repeat: no-repeat;
+    background-size: 260vh;
+    background-color: transparent;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: black;
+}
+.Footer-title {
+    margin-left: 20%;
+}
+.brand-title {
+    font-size: 2.5rem;
+    margin: .5rem;
+}
+.footer-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-link .ul {
+    justify-content: space-between;
+}
+.footer-link li {
+    list-style: none;
+}
+.footer-link li a{
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
+}
+.footer-link li a:hover {
+    color: white;
+    background-color: #555;
+    border-radius: 7px;
+}

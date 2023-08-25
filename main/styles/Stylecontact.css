@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+:root {
+    --bg-color: #ededed;
+    --text-color: black;
+    --main-color: black;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .2);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Header navigator bar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    background-image: url("https://wallpaperaccess.com/full/1159285.jpg");
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar-links ul {
+    font-weight: 500;
+    transition: .5s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links ul a {
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem;
+}
+.navbar-links a:hover,
+.navbar-links a.active {
+    color: blue;
+    transition: .5s;
+    font-size: 1.2em;
+}
+
+.navbar-links2 ul {
+    font-weight: 500;
+    transition: .5s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links2 li {
+    list-style: none;
+}
+.navbar-links2 .login{
+    margin-top: 5px;
+}
+.navbar-links2 ul a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+.navbar-links2 :hover {
+    color: blue;
+}
+.btnSign_up-popup {
+    width: 100px;
+    height: 40px;
+    color: #3164F4;
+    background: whitesmoke;
+    border: 1px solid #3164F4;
+    outline: #3164F4;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: .5s;
+}
+.btnSign_up-popup:hover {
+    background: #3164F4;
+    color: white;
+    transform: scale(1);
+}
+/* Drop down menu bar */
+.dropdown_menu li a {
+    text-decoration: none;
+    color: black;
+}
+.dropdown_menu li a:hover{
+    color: black;
+    width: 100%;
+    transition: .1s;
+    border-radius: 10px;
+    outline: 1px solid black;
+}
+.dropdown_menu .btnSign_up-popup {
+    background-color: transparent;
+}
+.dropdown_menu .btnSign_up-popup:hover {
+    background-color: blue;
+}
+.dropdown_menu {
+    text-align: center;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+    height: 250px;
+}
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .toggle_btn {
+    color: grey;
+    padding-right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .navbar-links2 ul,
+    .navbar-links ul{
+        display: none; 
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+} 
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        right: 1rem;
+        left: 1rem;
+        width: unset;
+    }
+} 
+/* ---------------------------------------------------------------------------------------------- */
+
+
+.container  {
+    padding: 15px 9%;
+
+    padding-top: 100px;
+}
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 15px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.left {
+    height: 100%;
+    background: url("../images/contactpic.png") no-repeat center;
+    background-size: cover;
+}
+
+.right {
+    text-align: left;
+}
+.right h2 {
+    font-size: 3rem;
+}
+.right p {
+    font-size: 1.5rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    margin-top: 1rem;
+  }
+  
+  input, textarea {
+    padding: 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+  }
+  
+  button[type="submit"] {
+    font-size: 1.2rem;
+    background-color: #3164F4;
+    border: 1px solid #3164F4;
+    outline: #3164F4;
+    color: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: .5s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: white;
+    border: 1px solid #3164F4;
+    color: #3164F4;
+    outline: #3164F4;
+  }
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Footer-link */
+.Footer {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    padding-right: 25%;
+    gap: 15px;
+    background-image: url("https://wallpaperaccess.com/full/1159285.jpg");
+    background-repeat: no-repeat;
+    background-size: 260vh;
+    background-color: transparent;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: black;
+}
+.Footer-title {
+    margin-left: 20%;
+}
+.brand-title {
+    font-size: 2.5rem;
+    margin: .5rem;
+}
+.footer-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-link .ul {
+    justify-content: space-between;
+}
+.footer-link li {
+    list-style: none;
+}
+.footer-link li a{
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
+}
+.footer-link li a:hover {
+    color: white;
+    background-color: #555;
+    border-radius: 7px;
+}
